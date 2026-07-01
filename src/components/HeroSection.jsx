@@ -15,7 +15,7 @@ function HeroSection() {
         </p>
       </div>
       <div className="hero-logo-wrapper">
-        <img className="hero-logo" src="public/avatar2.png"></img>
+        <img className="hero-logo" src="/avatar.png"></img>
       </div>
     </section>
   );
