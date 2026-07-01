@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/osama-portfolio/', // Set the base path for your project
+  base: '/portfolio/', // Set the base path for your project
 });
