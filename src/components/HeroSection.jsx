@@ -1,4 +1,5 @@
 import React from 'react';
+import avatarImg from '../assets/avatar.png';
 
 function HeroSection() {
   return (
@@ -15,7 +16,7 @@ function HeroSection() {
         </p>
       </div>
       <div className="hero-logo-wrapper">
-        <img className="hero-logo" src="/avatar.png"></img>
+        <img className="hero-logo" src={avatarImg} alt="Avatar" />
       </div>
     </section>
   );
