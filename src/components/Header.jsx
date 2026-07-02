@@ -1,14 +1,26 @@
 import React from 'react';
-
+import { Link } from '@tanstack/react-router';
 function Header() {
   return (
     <header className="header">
       <div className="header-logo">[Osama]</div>
       <div className="header-right-section">
         <nav className="header-nav">
-          <a href="#Home">HOME</a>
-          <a href="#projects">BLOG</a>
-          <a href="#contact">CONTACT</a>
+          <Link to="/">HOME</Link>
+          <Link to="/blog">BLOG</Link>
+          <Link
+            to="/"
+            hash="contact"
+            onClick={() => {
+              const contactSection = document.getElementById('contact');
+
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
+            CONTACT
+          </Link>
         </nav>
       </div>
     </header>

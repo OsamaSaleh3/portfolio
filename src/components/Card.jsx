@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from '@tanstack/react-router';
 const techColors = [
   { bg: '#e7dbdf8e' },
   { bg: '#e2e6d791' },
@@ -14,7 +14,8 @@ function Card({
   description,
   technologies = [],
   githubLink,
-  DemoLink,
+  demoLink,
+  articleId,
 }) {
   return (
     <div className="card">
@@ -22,7 +23,7 @@ function Card({
       <h5 className="card-date">{date}</h5>
       <p className="card-description">{description}</p>
 
-      {(technologies.length > 0 || githubLink || DemoLink) && (
+      {(technologies.length > 0 || githubLink || demoLink || articleId) && (
         <div className="card-footer">
           <div className="card-technologies">
             {technologies.map((tech, index) => {
@@ -46,10 +47,18 @@ function Card({
                 github
               </a>
             )}
-            {DemoLink && (
-              <a href={DemoLink} target="_blank" rel="noopener noreferrer">
+            {demoLink && (
+              <a href={demoLink} target="_blank" rel="noopener noreferrer">
                 Demo
               </a>
+            )}
+            {articleId && (
+              <Link
+                to={`/blog/${articleId}`}
+                params={{ articleId: articleId.toString() }}
+              >
+                [ Read Article ]
+              </Link>
             )}
           </div>
         </div>

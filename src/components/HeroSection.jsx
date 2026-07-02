@@ -1,5 +1,5 @@
 import React from 'react';
-import avatarImg from '../assets/avatar.png';
+import avatarImg from '../assets/avatar2.png';
 
 function HeroSection() {
   return (
